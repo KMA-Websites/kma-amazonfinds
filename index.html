@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GoodGear Germany — Good products. Less searching.</title>
+
+  <meta
+    name="description"
+    content="GoodGear Germany researches useful products, compares the options, and highlights the ones worth considering."
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><img src="images/logo.png"></span>
+      <span>Good<span style="color: var(--blue);">Gear</span></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="active">Home</a>
+      <!-- <a href="guides.html">Guides</a> -->
+      <a href="categories.html">Categories</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <div class="header-search">
+      <span class="search-icon">⌕</span>
+      <input
+        type="search"
+        id="headerSearch"
+        placeholder="Search products..."
+        aria-label="Search products"
+      >
+    </div>
+
+    <button class="menu-toggle text" id="menuToggle" aria-label="Open menu">
+      ☰
+    </button>
+
+  </div>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div class="hero-copy">
+
+        <div class="eyebrow">
+          Independent product selection
+        </div>
+
+        <h1>
+          Good products.
+          <span>Less searching.</span>
+        </h1>
+
+        <p class="hero-text">
+          I research useful products, compare the options, and highlight
+          the ones actually worth considering.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#products" class="button button-blue">
+            Explore my picks
+            <svg class="button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+          
+
+          <!-- <a href="guides.html" class="button button-light">
+            Latest guides
+          </a> -->
+        </div>
+
+        <div class="hero-notes">
+          <span style="display:flex; gap: 8px;">
+            <svg style="width: 17px; height: 17px; color:var(--blue)" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m5 12 4 4L19 6"></path>
+            </svg> 
+            Built around quality
+        </span>
+
+          <span style="display:flex; gap: 8px;">
+            <svg style="width: 17px; height: 17px; color:var(--blue)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+            </svg>
+            No sponsored recommendations
+          </span>
+        </div>
+
+      </div>
+
+
+      <div class="hero-art">
+
+        <div class="art-grid"></div>
+
+        <div class="art-object object-one"></div>
+        <div class="art-object object-two"></div>
+        <div class="art-object object-three"></div>
+
+        <div class="art-blue"></div>
+
+        <div class="art-label">
+          GOOD PRODUCTS<br>
+          LESS SEARCHING
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SEARCH / PRODUCT DISCOVERY -->
+
+  <section class="products-section" id="products">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div>
+          <div class="section-kicker">Product discovery</div>
+
+          <h2>
+            Useful products,<br>
+            clearly sorted.
+          </h2>
+
+          <p>
+            Search the products, browse by category, or do both.
+            No mysterious algorithm required.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="product-tools">
+
+        <div class="product-search">
+
+          <span class="large-search-icon">⌕</span>
+
+          <input
+            type="search"
+            id="productSearch"
+            placeholder="Search products, categories or use cases..."
+            autocomplete="off"
+          >
+
+          <button id="clearSearch" class="clear-search" type="button">
+            Clear
+          </button>
+
+        </div>
+
+
+        <div class="filter-row">
+
+          <button class="filter active" data-filter="all">
+            All
+          </button>
+
+          <button class="filter" data-filter="Home & Kitchen">
+            Home & Kitchen
+          </button>
+
+          <button class="filter" data-filter="Tech & Gadgets">
+            Tech & Gadgets
+          </button>
+
+          <button class="filter" data-filter="Outdoor">
+            Outdoor
+          </button>
+
+          <button class="filter" data-filter="Fitness">
+            Fitness
+          </button>
+
+          <button class="filter" data-filter="Tools">
+            Tools
+          </button>
+
+          <button class="filter" data-filter="Everyday Essentials">
+            Everyday Essentials
+          </button>
+
+        </div>
+
+
+        <div class="search-status" id="searchStatus">
+          Showing all products
+        </div>
+
+      </div>
+
+
+      <div class="product-grid" id="productGrid"></div>
+
+
+      <div class="no-results" id="noResults">
+
+        <div class="no-results-icon">⌕</div>
+
+        <h3>
+          Nothing found.
+        </h3>
+
+        <p>
+          Either I haven't researched it yet, or your search is
+          more ambitious than our current database.
+        </p>
+
+        <button class="button button-blue" id="resetSearch">
+          Reset search
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CATEGORIES -->
+
+  <section class="section">
+  <div class="container">
+
+    <div class="section-heading">
+        <div class="section-kicker">Explore topics</div>
+        <h2>Find your<br>corner of the internet.</h2>
+        <p>
+          Practical guidance for things you actually want to buy.
+        </p>
+    </div>
+
+    <div class="card-grid category-grid">
+
+      <article class="category-card">
+        <a class="category-card-link" href="index.html?category=Home%20%26%20Kitchen#products">
+
+          <span class="category-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.7" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path>
+              <path d="M8 10h.01M16 10h.01"></path>
+            </svg>
+          </span>
+
+          <h3>Home &amp; Kitchen</h3>
+          <p>Useful things for kitchens, homes and everyday routines.</p>
+
+          <span class="card-arrow">
+            Explore category
+            <svg class="icon-inline" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </span>
+
+        </a>
+      </article>
+
+
+      <article class="category-card">
+        <a class="category-card-link" href="index.html?category=Tech%20%26%20Gadgets#products">
+
+          <span class="category-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.7" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect x="4" y="5" width="16" height="14" rx="2"></rect>
+              <path d="M9 9h6v6H9zM8 2v3m8-3v3M8 19v3m8-3v3M2 9h2m-2 6h2m16-6h2m-2 6h2"></path>
+            </svg>
+          </span>
+
+          <h3>Tech &amp; Gadgets</h3>
+          <p>Small pieces of technology that solve actual problems.</p>
+
+          <span class="card-arrow">
+            Explore category
+            <svg class="icon-inline" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </span>
+
+        </a>
+      </article>
+
+
+      <article class="category-card">
+        <a class="category-card-link" href="index.html?category=Outdoor#products">
+
+          <span class="category-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.7" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="m3 19 6-9 4 5 3-4 5 8H3z"></path>
+              <path d="M13 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+            </svg>
+          </span>
+
+          <h3>Outdoor</h3>
+          <p>Gear for getting outside without buying an entire expedition.</p>
+
+          <span class="card-arrow">
+            Explore category
+            <svg class="icon-inline" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </span>
+
+        </a>
+      </article>
+
+
+      <article class="category-card">
+        <a class="category-card-link" href="index.html?category=Fitness#products">
+
+          <span class="category-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.7" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 8v8M3 10v4m18-4v4m-3-6v8M6 12h12"></path>
+            </svg>
+          </span>
+
+          <h3>Fitness</h3>
+          <p>Practical equipment for movement, training and recovery.</p>
+
+          <span class="card-arrow">
+            Explore category
+            <svg class="icon-inline" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </span>
+
+        </a>
+      </article>
+
+
+      <article class="category-card">
+        <a class="category-card-link" href="index.html?category=Tools#products">
+
+          <span class="category-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.7" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18l3 3 5.3-5.3a5 5 0 0 0 6.4-6.4L14 12l-3-3z"></path>
+            </svg>
+          </span>
+
+          <h3>Tools</h3>
+          <p>DIY equipment for people who occasionally need to fix shit.</p>
+
+          <span class="card-arrow">
+            Explore category
+            <svg class="icon-inline" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </span>
+
+        </a>
+      </article>
+
+
+      <article class="category-card">
+        <a class="category-card-link" href="index.html?category=Everyday%20Essentials#products">
+
+          <span class="category-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.7" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 8h18l-1 12H4L3 8zM8 8V5a4 4 0 0 1 8 0v3"></path>
+              <path d="M9 13h6"></path>
+            </svg>
+          </span>
+
+          <h3>Everyday Essentials</h3>
+          <p>Well-designed things for the routines you do every day.</p>
+
+          <span class="card-arrow">
+            Explore category
+            <svg class="icon-inline" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </span>
+
+        </a>
+      </article>
+
+    </div>
+
+    <!-- <div class="button-row" style="margin-top:22px">
+      <a class="button button-outline" href="#">
+        View all categories
+
+        <svg class="button-arrow" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.7"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M5 12h14M13 6l6 6-6 6"></path>
+        </svg>
+      </a>
+    </div> -->
+
+  </div>
+</section>
+
+
+  <!-- GUIDES -->
+
+  <!-- <section class="guides-section">
+
+    <div class="container">
+
+      <div class="section-heading split">
+
+        <div>
+          <div class="section-kicker">Buying guides</div>
+
+          <h2>
+            Need a little help?<br>
+            Start here.
+          </h2>
+        </div>
+
+        <a href="guides.html" class="text-link">
+          View all guides →
+        </a>
+
+      </div>
+
+
+      <div class="guide-grid">
+
+        <a href="guides.html" class="guide-card">
+
+          <div>
+            <span class="guide-category">
+              Home & Kitchen
+            </span>
+
+            <h3>
+              Best Coffee Gear
+              for Beginners
+            </h3>
+
+            <p>
+              The stuff that actually matters when you're
+              trying to make better coffee without turning
+              your kitchen into a laboratory.
+            </p>
+          </div>
+
+          <span class="guide-link">
+            Read guide →
+          </span>
+
+        </a>
+
+
+        <a href="guides.html" class="guide-card">
+
+          <div>
+            <span class="guide-category">
+              Home
+            </span>
+
+            <h3>
+              Useful Gear for
+              a Small Apartment
+            </h3>
+
+            <p>
+              Practical products that save space without
+              making your home look like an Amazon warehouse.
+            </p>
+          </div>
+
+          <span class="guide-link">
+            Read guide →
+          </span>
+
+        </a>
+
+
+        <a href="guides.html" class="guide-card">
+
+          <div>
+            <span class="guide-category">
+              Tools
+            </span>
+
+            <h3>
+              The Beginner's
+              DIY Toolkit
+            </h3>
+
+            <p>
+              What you actually need before buying 47
+              different screwdrivers you'll use twice.
+            </p>
+          </div>
+
+          <span class="guide-link">
+            Read guide →
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section> -->
+
+
+  <!-- EDITORIAL APPROACH -->
+
+  <section class="section-editorial section-alt">
+    <div class="container method-layout">
+
+        <div class="section-heading">
+        <div class="section-kicker">How I choose</div>
+
+        <h2>What makes the cut</h2>
+
+        <p class="lead">
+            I make it clear what goes into a recommendation — and what still
+            needs to be researched. I never claim to have personally tested
+            something unless I actually have.
+        </p>
+
+        <a class="button button-light" href="about.html">
+            More about GoodGear
+            <svg class="button-arrow"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+        </a>
+        </div>
+
+        <div class="method-grid">
+
+        <div class="method-card">
+            <span class="method-check">
+            <svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="m5 12 4 4L19 6"></path>
+            </svg>
+            </span>
+            <span>Actually useful</span>
+        </div>
+
+        <div class="method-card">
+            <span class="method-check">
+            <svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="m5 12 4 4L19 6"></path>
+            </svg>
+            </span>
+            <span>Value for money</span>
+        </div>
+
+        <div class="method-card">
+            <span class="method-check">
+            <svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="m5 12 4 4L19 6"></path>
+            </svg>
+            </span>
+            <span>Features that matter</span>
+        </div>
+
+        <div class="method-card">
+            <span class="method-check">
+            <svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="m5 12 4 4L19 6"></path>
+            </svg>
+            </span>
+            <span>Quality</span>
+        </div>
+
+        <div class="method-card">
+            <span class="method-check">
+            <svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="m5 12 4 4L19 6"></path>
+            </svg>
+            </span>
+            <span>Real-world fit</span>
+        </div>
+
+        <div class="method-card">
+            <span class="method-check">
+            <svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="m5 12 4 4L19 6"></path>
+            </svg>
+            </span>
+            <span>Available customer feedback</span>
+        </div>
+
+        <div class="method-card">
+            <span class="method-check">
+            <svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="m5 12 4 4L19 6"></path>
+            </svg>
+            </span>
+            <span>Practical pros &amp; cons</span>
+        </div>
+
+        </div>
+
+    </div>
+    </section>
+
+
+  <!-- AFFILIATE -->
+
+  <section class="affiliate-section">
+
+    <div class="container">
+
+      <div class="affiliate-box">
+
+        <div class="affiliate-mark">
+          G/
+        </div>
+
+        <div>
+
+          <div class="section-kicker">
+            Affiliate disclosure
+          </div>
+
+          <h2>
+            Yes, sometimes
+            I get paid.
+          </h2>
+
+          <p>
+            Some links on GoodGear are affiliate links. If you
+            buy something through one, I may earn a small
+            commission at no extra cost to you.
+          </p>
+
+          <p>
+            The recommendation doesn't change because of that.
+            The research comes first.
+          </p>
+
+          <a href="affiliate-disclosure.html" class="text-link">
+            Read the full disclosure →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+
+        <a href="index.html" class="logo">
+          <span class="logo-mark"><img src="images/logo.png"></span>
+          <span>Good<span style="color: var(--blue);">Gear</span></span>
+        </a>
+
+        <p>
+          Good products. Less searching.
+        </p>
+
+        <p class="footer-small">
+          Independent editorial product discovery.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Explore</h4>
+
+        <a href="index.html">Home</a>
+        <!-- <a href="guides.html">Buying Guides</a> -->
+        <a href="categories.html">Categories</a>
+        <a href="about.html">About GoodGear</a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Information</h4>
+
+        <a href="affiliate-disclosure.html">
+          Affiliate Disclosure
+        </a>
+
+        <a href="impressum.html">
+          Impressum
+        </a>
+
+        <a href="privacy.html">
+          Privacy
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Good to know</h4>
+
+        <p>
+          As an Amazon Associate, I earn from
+          qualifying purchases.
+        </p>
+
+        <p>
+          GoodGear is independently operated and is
+          not operated, sponsored or endorsed by Amazon.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 GoodGear Germany
+      </span>
+
+      <span>
+        No sponsored recommendations
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
