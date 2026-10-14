@@ -99,8 +99,6 @@ Just a lightweight static website.
 
 https://kma-websites.github.io/kma-amazonfinds/
 
-Probably after I compare another 14 products I don't actually need.
-
 <br>
 
 ## 📁 Project Structure
