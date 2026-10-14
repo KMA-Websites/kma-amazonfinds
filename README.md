@@ -107,13 +107,10 @@ Probably after I compare another 14 products I don't actually need.
 
 <br>
 
-`/guides` — Guides for confused shoppers  
-`/reviews` — Product reviews & thoughts  
-`/categories` — Places to put the stuff  
-`/data` — Product & content data  
 `/css` — Making things look expensive  
 `/js` — Making things do things  
-`/assets` — Pictures & other internet decorations  
+`/images` — Pictures & other internet decorations  
+`/guides` — Guides for confused shoppers (coming soon)  
 
 <br>
 
